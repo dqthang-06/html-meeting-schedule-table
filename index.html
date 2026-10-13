@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lịch họp công ty</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 24px;
+      background-color: #f8fafc;
+    }
+
+    h1 {
+      color: #1e293b;
+      margin-bottom: 16px;
+    }
+
+    table {
+      width: 100%;
+      max-width: 650px;
+      border-collapse: collapse;
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 12px 16px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #0284c7;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    td.content {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lịch họp công ty</h1>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Ngày</th>
+        <th>Giờ</th>
+        <th>Nội dung cuộc họp</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- rowspan="2" để gộp Thứ Hai có 2 cuộc họp -->
+        <td rowspan="2"><strong>Thứ Hai</strong><br>(20/10)</td>
+        <td>08:30 - 09:30</td>
+        <td class="content">Họp giao ban đầu tuần toàn công ty</td>
+      </tr>
+      <tr>
+        <td>14:00 - 15:30</td>
+        <td class="content">Đánh giá tiến độ dự án tuần trước</td>
+      </tr>
+      <tr>
+        <td><strong>Thứ Ba</strong><br>(21/10)</td>
+        <!-- colspan="2" gộp cả cột Giờ và Nội dung cho sự kiện kéo dài cả ngày -->
+        <td colspan="2" class="content"><strong>Buổi đào tạo nội bộ kỹ năng mềm (09:00 - 17:00)</strong></td>
+      </tr>
+      <tr>
+        <!-- rowspan="2" gộp Thứ Tư có 2 cuộc họp -->
+        <td rowspan="2"><strong>Thứ Tư</strong><br>(22/10)</td>
+        <td>09:00 - 10:30</td>
+        <td class="content">Lên kế hoạch phát triển tính năng mới</td>
+      </tr>
+      <tr>
+        <td>15:00 - 16:30</td>
+        <td class="content">Phỏng vấn ứng viên bộ phận kỹ thuật</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
